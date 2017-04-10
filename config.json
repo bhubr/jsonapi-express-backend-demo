@@ -1,0 +1,41 @@
+{
+  "development": {
+    "db": {
+      "username": "root",
+      "password": null,
+      "database": "ember_blog_dev",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "keys": {
+      "private": "keys/private.key",
+      "public": "keys/public.key"
+    }
+  },
+  "test": {
+    "db": {
+      "username": "root",
+      "password": null,
+      "database": "database_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "keys": {
+      "private": "keys/private.key",
+      "public": "keys/public.key"
+    }
+  },
+  "production": {
+    "db": {
+      "username": "root",
+      "password": null,
+      "database": "database_production",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "keys": {
+      "private": "keys/private.key",
+      "public": "keys/public.key"
+    }
+  }
+}
