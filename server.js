@@ -6,8 +6,8 @@ var configs = require(__dirname + '/config.json');
 var env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
 var config = configs[env];
 
-var relationships = require('./relationships');
-var { router, middlewares } = require('jsonapi-express-backend')(__dirname, config, relationships);
+var models = require('./models');
+var { router, middlewares } = require('jsonapi-express-backend')(__dirname, config, models);
 
 var port = process.argv.length >= 3 ? parseInt( process.argv[2], 10 ) : 3002;
 

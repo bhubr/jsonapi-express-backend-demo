@@ -4,6 +4,6 @@
   "version": "0.0.1",
   "dependencies": {
     "node-rsa": "^0.4.2",
-    "jsonapi-express-backend": "~0.2.2"
+    "jsonapi-express-backend": "~0.3.1"
   }
 }
