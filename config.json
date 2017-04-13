@@ -10,7 +10,8 @@
     "keys": {
       "private": "keys/private.key",
       "public": "keys/public.key"
-    }
+    },
+    "whitelistedUrls": ["GET /api/v1/posts*", "GET /api/v1/users*"]
   },
   "test": {
     "db": {
