@@ -7,10 +7,19 @@ var env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
 var config = configs[env];
 
 var models = require('./models');
-var { router, middlewares } = require('jsonapi-express-backend')(__dirname, config, models);
+var { router, middlewares, queryBuilder, queryAsync } = require('jsonapi-express-backend')(__dirname, config, models);
  // var { router, middlewares } = require('../jsonapi-reference')(__dirname, config, models);
 
 var port = process.argv.length >= 3 ? parseInt( process.argv[2], 10 ) : 3002;
+
+/*------------------------------------------------------------*
+ * DIRTY. This is an ugly hack to keep MySQL connection alive.
+ *------------------------------------------------------------*/
+var userSelect = queryBuilder.selectWhere('users', { id: 1 });
+setInterval(() => {
+  // console.log('keep mysql alive');
+  return queryAsync(userSelect);
+}, 300000); // 5 minutes
 
 /**
  * Setup Express
