@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "dependencies": {
     "jsonapi-express-backend": "^0.3.8",
-    "node-rsa": "^0.4.2"
+    "node-rsa": "^0.4.2",
+    "nodemailer": "^4.0.1"
   }
 }

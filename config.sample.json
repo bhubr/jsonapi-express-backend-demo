@@ -11,7 +11,12 @@
       "private": "keys/private.key",
       "public": "keys/public.key"
     },
-    "whitelistedUrls": ["GET /api/v1/posts*", "GET /api/v1/users*"]
+    "email": {
+      "adminEmail": "johndoe@example.com",
+      "mailgunLogin": "YOUR.MAILGUN.LOGIN",
+      "mailgunPass": "YOUR.MAILGUN.PASS"
+    },
+    "whitelistedUrls": ["GET /api/v1/posts*", "GET /api/v1/users*", "POST /send-message"]
   },
   "test": {
     "db": {
@@ -24,6 +29,11 @@
     "keys": {
       "private": "keys/private.key",
       "public": "keys/public.key"
+    },
+    "email": {
+      "adminEmail": "johndoe@example.com",
+      "mailgunLogin": "YOUR.MAILGUN.LOGIN",
+      "mailgunPass": "YOUR.MAILGUN.PASS"
     }
   },
   "production": {
@@ -37,6 +47,11 @@
     "keys": {
       "private": "keys/private.key",
       "public": "keys/public.key"
+    },
+    "email": {
+      "adminEmail": "johndoe@example.com",
+      "mailgunLogin": "YOUR.MAILGUN.LOGIN",
+      "mailgunPass": "YOUR.MAILGUN.PASS"
     }
   }
 }
