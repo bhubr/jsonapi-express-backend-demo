@@ -1,65 +1,65 @@
 module.exports = {
-  users: {
+  user: {
     relationships: {
       posts: {
-        table: 'posts',
+        model: 'post',
         type: 'hasMany',
         reverse: 'author'
       },
       comments: {
-        table: 'comments',
+        model: 'comment',
         type: 'hasMany',
         reverse: 'author'
       },
       followers: {
-        table: 'users',
+        model: 'user',
         type: 'hasMany',
         reverse: 'followees'
       },
       followees: {
-        table: 'users',
+        model: 'user',
         type: 'hasMany',
         reverse: 'followers'
       }
     }
   },
-  posts: {
+  post: {
     relationships: {
       author: {
-        table: 'users',
+        model: 'user',
         type: 'belongsTo',
         reverse: 'posts'
       },
       comments: {
-        table: 'comments',
+        model: 'comment',
         type: 'hasMany',
         reverse: 'post'
       },
       tags: {
-        table: 'tags',
+        model: 'tag',
         type: 'hasMany',
         reverse: 'posts'
       }
     }
   },
-  tags: {
+  tag: {
     relationships: {
       posts: {
-        table: 'posts',
+        model: 'post',
         type: 'hasMany',
         reverse: 'tags'
       }
     }
   },
-  comments: {
+  comment: {
     relationships: {
       post: {
-        table: 'posts',
+        model: 'post',
         type: 'belongsTo',
         reverse: 'comments'
       },
       author: {
-        table: 'users',
+        model: 'user',
         type: 'belongsTo',
         reverse: 'comments'
       }

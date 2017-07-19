@@ -1,11 +1,14 @@
 {
   "development": {
     "db": {
-      "username": "root",
+      "user": "root",
       "password": null,
       "database": "ember_blog_dev",
       "host": "127.0.0.1",
       "dialect": "mysql"
+    },
+    "permissions": {
+      "enabled": false
     },
     "keys": {
       "private": "keys/private.key",
@@ -20,11 +23,14 @@
   },
   "test": {
     "db": {
-      "username": "root",
+      "user": "root",
       "password": null,
       "database": "database_test",
       "host": "127.0.0.1",
       "dialect": "mysql"
+    },
+    "permissions": {
+      "enabled": false
     },
     "keys": {
       "private": "keys/private.key",
@@ -38,11 +44,14 @@
   },
   "production": {
     "db": {
-      "username": "root",
+      "user": "root",
       "password": null,
       "database": "database_production",
       "host": "127.0.0.1",
       "dialect": "mysql"
+    },
+    "permissions": {
+      "enabled": false
     },
     "keys": {
       "private": "keys/private.key",
